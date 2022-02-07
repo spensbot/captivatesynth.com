@@ -5,17 +5,22 @@ import gifUniverse from '../../static/captivate-universe.gif'
 import gifLightScenes from '../../static/captivate-light-scenes.gif'
 import gifVisualScenes from '../../static/captivate-visual-scenes.gif'
 import gifMixer from '../../static/captivate-mixer.gif'
-import logo from '../../static/Thick_bg.png'
+import Header from '../components/Header'
+import me from '../../static/me_serious.jpg'
+import Section from '../components/Section'
+import Footer from '../components/Footer'
+import Button from '../components/Button'
 
 const GlobalStyle = createGlobalStyle`
   html {
     color: #080808;
-    background-color: #f8f8f8;
+    background-color: #000;
   }
 
   body {
     font-family: "Montserrat", "Roboto", "Helvetica", "Arial", sans-serif;
     margin: 0;
+    background-color: #f8f8f8;
   }
 `
 
@@ -30,70 +35,62 @@ export default function IndexPage() {
     <Root>
       <GlobalStyle />
       <title>Captivate Lighting and Visual Synth</title>
+      <Header />
       <FullTitle>
-        <SubSection>
-          <Row style={{ margin: '0 -2vw' }}>
-            <Title style={{ margin: '2vw' }}>Captivate</Title>
-            <TitleIcon src={logo} style={{ margin: '2vw' }} />
-          </Row>
-          <SubTitle>Lighting and Visual Synth</SubTitle>
-        </SubSection>
-      </FullTitle>
-      <Section alternate={alternate()}>
-        <SubSection>
-          <H2>Ready to Impress?</H2>
-          <P>
+        <TitleTextContainer>
+          <TitleText>
             Captivate generates live Visuals and DMX Lighting that dynamically
             synchronizes to music.
+            <br />
+            <br />
+            Free - Open Source
+          </TitleText>
+        </TitleTextContainer>
+      </FullTitle>
+      <Section alternate={alternate()} flex>
+        <SubSection>
+          {/* <H3>Ready to Impress?</H3> */}
+          <H3>Create A Lasting Impression</H3>
+          <P>Great lighting and visuals bring music to life</P>
+          <P>
+            With Captivate, creating a visual experience is every bit as fun and
+            satifying as playing an instrument.
           </P>
+          <P> This is how visual creation is supposed to feel</P>
         </SubSection>
       </Section>
-      <Section alternate={alternate()}>
+      <Section alternate={alternate()} flex>
         <SubSection>
-          <H2>
+          <H3>
             Beautiful. {/* Powerful. */}
             <br />
             Intuitive.
             <br />
             Fun.
-          </H2>
-        </SubSection>
-        <SubSection>
-          <P>
-            Great lighting and visuals bring music to life
-            <br />
-            <br />
-            With Captivate, creating a visual experience is every bit as fun and
-            satifying as playing an instrument.
-            <br />
-            <br />
-            This is how visual creation is supposed to feel
-          </P>
+          </H3>
         </SubSection>
       </Section>
-      <Section alternate={alternate()}>
+      <Section alternate={alternate()} flex>
         <SubSection>
-          <H2>Intuitive.</H2>
+          <H3>Intuitive.</H3>
           <P>
             Let Captivate automate the show for you, or plug in a midi
             controller and "play" your visuals like an instrument.
           </P>
-          <H2>Synchronized.</H2>
+          <H3>Synchronized.</H3>
           <P>
             Ableton Link integration allows lights and visuals to synchonize
             automatically with other software
           </P>
-          <H2>Fun.</H2>
+          <H3>Fun.</H3>
           <P>With captivate, designing visuals is a blast</P>
         </SubSection>
       </Section>
-      <Section alternate={alternate()}>
+      <Section alternate={alternate()} flex>
         <SubSection>
-          <H2>Add Dimension To Your DMX Universe</H2>
+          <H3>Add Dimension To Your DMX Universe</H3>
+          <P>Configure your dmx universe in minutes.</P>
           <P>
-            Configure your dmx lighting setup in minutes.
-            <br />
-            <br />
             Tell Captivate which fixtures you have, and where they are located
             in space.
           </P>
@@ -106,22 +103,23 @@ export default function IndexPage() {
           />
         </SubSection>
       </Section>
-      <Section alternate={alternate()}>
+      <Section alternate={alternate()} flex>
         <SubSection>
-          <H2>Breathtaking Lighting</H2>
+          <H3>Breathtaking Lighting</H3>
           <P>
             With captivate, hundreds of DMX channels boil down to a handful of
             intuitive parameters, including:
-            <ul>
-              <li>Hue</li>
-              <li>Saturation</li>
-              <li>Brightness</li>
-              <li>X</li>
-              <li>Y</li>
-              <li>Strobe</li>
-              <li>and more...</li>
-            </ul>
-            <div style={{ height: '0rem' }} />
+          </P>
+          <ul>
+            <li>Hue</li>
+            <li>Saturation</li>
+            <li>Brightness</li>
+            <li>X</li>
+            <li>Y</li>
+            <li>Strobe</li>
+            <li>and more...</li>
+          </ul>
+          <P>
             Take control of the parameters live, or automate them with
             captivate's familiar, synth-like modulation tools.
           </P>
@@ -134,9 +132,9 @@ export default function IndexPage() {
           />
         </SubSection>
       </Section>
-      <Section alternate={alternate()}>
+      <Section alternate={alternate()} flex>
         <SubSection>
-          <H2>Stunning Visuals</H2>
+          <H3>Stunning Visuals</H3>
           <P>
             Curate a set of visualizations for each show.
             <br />
@@ -148,44 +146,79 @@ export default function IndexPage() {
           <img
             src={gifVisualScenes}
             style={{ width: '100%' }}
-            alt={`Captivate's  UI.
+            alt={`Captivate's Visualization Scene Creator UI.
+            `}
+          />
+        </SubSection>
+      </Section>
+      <Section alternate={alternate()} flex>
+        <SubSection>
+          <H3>The Tools you Need</H3>
+          <P>View all 512 channels live. Take control when you need.</P>
+          <img
+            src={gifMixer}
+            style={{ width: '100%' }}
+            alt={`Captivate's DMX Mixer UI.
             `}
           />
         </SubSection>
       </Section>
       <Section alternate={alternate()}>
         <SubSection>
-          <H2>The Tools you Need</H2>
-          <P>View all 512 channels live. Take control when you need.</P>
-          <img
-            src={gifMixer}
-            style={{ width: '100%' }}
-            alt={`Captivate's  UI.
-            `}
-          />
-        </SubSection>
-      </Section>
-      <Section alternate={alternate()} noFlex>
-        <SubSection>
-          <H2>And this is just the beginning</H2>
-          <H4>Planned future features include:</H4>
+          <H3>And this is just the beginning</H3>
+          <P>
+            We have lots of ideas to make Captivate more powerful and flexible
+          </P>
+          <H4>Features include:</H4>
           <ul>
             <li>More & improved visualizations</li>
             <li>Share scenes with other captivate users</li>
-            <li>Do whatever</li>
+            <li>More parameters & custom parameters</li>
+            <li>More & improved modulators</li>
+            <li>Lighting groups</li>
+            <li>Visual layers</li>
           </ul>
         </SubSection>
       </Section>
-      <Section alternate={alternate()} noFlex>
+      <Section alternate={alternate()} flex>
         <SubSection>
-          <H2>Download</H2>
-          <Row>
-            <DLButton>Mac (intel)</DLButton>
-            <DLButton>Mac (arm)</DLButton>
-          </Row>
-          <H3>Windows & Linux support coming soon</H3>
+          <H3>How It Started</H3>
+          <P>
+            I've been a musician all my life. Music is fun and dynamic. But
+            lighting software has always been static, clunky, and unintuitive.
+            This forces artists to choose between a pre-defined light show that
+            locks you into a set, or a light show that doesn't fit the music.
+            <br />
+            <br />
+            Captivate solves these issues. Everything is in sync, I can take as
+            much live control as I'd like, and adding fixtures to my DMX
+            universe is a piece of cake.
+            <br />
+            <br />
+            The end result is an app that's incredibly fun to use. And the
+            results truly are captivating.
+          </P>
+        </SubSection>
+        <SubSection style={{ flex: '0.5 0 0' }}>
+          <img
+            src={me}
+            style={{ width: '15rem', height: '20rem', objectFit: 'cover' }}
+            alt="Spenser Saling, Captivate Creator"
+          />
+          <P>Spenser Saling, Creator</P>
         </SubSection>
       </Section>
+      <Section alternate={alternate()}>
+        <SubSection>
+          <H3>Download</H3>
+          <Row>
+            <Button>Mac (intel)</Button>
+            <Button>Mac (arm)</Button>
+          </Row>
+          <H5>Windows & Linux support coming soon</H5>
+        </SubSection>
+      </Section>
+      <Footer />
     </Root>
   )
 }
@@ -194,66 +227,28 @@ const Root = styled.main``
 
 const FullTitle = styled.div`
   color: #eee;
-  padding: 5% 15%;
-  margin: 0 -5vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #222;
   min-height: 100vh;
-  box-sizing: border-box;
+  position: relative;
 `
 
-const Title = styled.h1`
-  font-size: 10vw;
-  @media (min-width: ${mediaMinWidth}) {
-    font-size: 5vw;
-  }
+const TitleText = styled.h2`
+  font-size: 1rem;
 `
 
-const TitleIcon = styled.img`
-  width: 14vw;
-  @media (min-width: ${mediaMinWidth}) {
-    width: 7vw;
-  }
-`
-
-const SubTitle = styled.h2`
-  font-size: 4vw;
-  @media (min-width: ${mediaMinWidth}) {
-    font-size: 3vw;
-  }
-  color: #aaa;
-`
-
-const Section = styled.div`
-  padding: 10% 15%;
-  margin: 0 -5vw;
-  color: ${(props) => props.alternate && '#eee'};
-  background-color: ${(props) => props.alternate && '#222'};
-  display: ${(props) => (props.noFlex ? '' : 'flex')};
-  align-items: center;
-  flex-wrap: wrap;
+const TitleTextContainer = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  background-color: #0005;
 `
 
 const SubSection = styled.div`
   flex: 1 0 0;
   min-width: 15rem;
-  margin: 5vw;
-`
-
-const DLButton = styled.button`
-  padding: 1.5rem 2rem;
-  color: #fff;
-  background-color: #55e;
-  border: 2px solid #55e;
-  border-radius: 0.5rem;
   margin: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  :hover {
-    border: 2px solid white;
-  }
 `
 
 const Row = styled.div`
