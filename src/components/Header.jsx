@@ -49,7 +49,7 @@ export default function Header() {
       ></TitleIcon>
       <Spacer />
       <SubTitle style={{ fontSize: `${ease * 0.5 + 1}rem` }}>
-        Lighting and Visual Synth
+        Lighting & Visual Synth
       </SubTitle>
     </Root>
   )

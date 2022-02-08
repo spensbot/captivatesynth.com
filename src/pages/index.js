@@ -201,6 +201,21 @@ export default function IndexPage() {
       </Section>
       <Section alternate={alternate()}>
         <SubSection>
+          <H3>Necessary Equipment</H3>
+          <P>
+            Captivate should work with any ENTTEC USB Pro DMX device such as the
+          </P>
+          <a href="https://www.enttec.com/product/lighting-communication-protocols/dmx512/dmx-usb-interface/">
+            ENNTEC USB Pro
+          </a>
+          <P>or the</P>
+          <a href="https://dmxking.com/usbdmx/ultradmxmicro">
+            DMX King Ultra DMX Micro
+          </a>
+        </SubSection>
+      </Section>
+      <Section alternate={alternate()}>
+        <SubSection>
           <H3>Download</H3>
           <Row>
             <Button>Mac (intel)</Button>
