@@ -10,6 +10,7 @@ import me from '../../static/me_serious.jpg'
 import Section from '../components/Section'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
+import Title from '../components/Title'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -36,17 +37,7 @@ export default function IndexPage() {
       <GlobalStyle />
       <title>Captivate Lighting and Visual Synth</title>
       <Header />
-      <FullTitle>
-        <TitleTextContainer>
-          <TitleText>
-            Captivate generates live Visuals and DMX Lighting that dynamically
-            synchronizes to music.
-            <br />
-            <br />
-            Free - Open Source
-          </TitleText>
-        </TitleTextContainer>
-      </FullTitle>
+      <Title />
       <Section alternate={alternate()} flex>
         <SubSection>
           {/* <H3>Ready to Impress?</H3> */}
@@ -224,26 +215,6 @@ export default function IndexPage() {
 }
 
 const Root = styled.main``
-
-const FullTitle = styled.div`
-  color: #eee;
-  background-color: #222;
-  min-height: 100vh;
-  position: relative;
-`
-
-const TitleText = styled.h2`
-  font-size: 1rem;
-`
-
-const TitleTextContainer = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1rem;
-  background-color: #0005;
-`
 
 const SubSection = styled.div`
   flex: 1 0 0;

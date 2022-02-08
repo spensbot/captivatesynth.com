@@ -4,6 +4,7 @@ import logo from '../../static/Thick.png'
 import { mediaMinWidth } from './styled'
 
 const speed = 0.1
+export const opacity = 0.7
 
 export default function Header() {
   const [ease, setEase] = React.useState(1)
@@ -28,11 +29,16 @@ export default function Header() {
     }
   }, [ease])
 
+  const backgroundColor = `rgba(0, 0, 0, ${1 - ease * (1 - opacity)})`
+  const boxShadow = `0px 0px 15px 0px ${backgroundColor}`
+
   return (
     <Root
       style={{
         padding: `${ease * 0.5 + 0.0}rem 1rem`,
-        backgroundColor: `rgba(0, 0, 0, ${1 - ease * 0.7})`,
+        backgroundColor: backgroundColor,
+        boxShadow: boxShadow,
+        WebkitBoxShadow: boxShadow,
       }}
     >
       <Title style={{ fontSize: `${ease * 0.7 + 1.3}rem` }}>Captivate</Title>
@@ -59,8 +65,6 @@ const Root = styled.div`
   color: #eee;
   flex-wrap: wrap;
   box-sizing: border-box;
-  -webkit-box-shadow: 0px 0px 15px 0px #000000;
-  box-shadow: 0px 0px 15px 0px #000000;
   z-index: 100;
 `
 

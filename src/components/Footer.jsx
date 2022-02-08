@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <Root>
       <p>Captivate is beta software. Use at your own risk</p>
-      <p>Made with love in Portland, OR</p>
+      <p>Made with ❤️ in Portland, OR</p>
       <Link href="https://www.sailingtomars.com">
         More from Sailing To Mars
       </Link>
