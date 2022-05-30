@@ -19,7 +19,7 @@ export default function Section({ alternate, flex, children }) {
 const Root = styled.div`
   display: flex;
   justify-content: center;
-  padding: 15% 1rem;
+  padding: 0 1rem;
 `
 
 const Container = styled.div`
@@ -28,4 +28,5 @@ const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
   margin: -1rem;
+  padding: 10% 0;
 `

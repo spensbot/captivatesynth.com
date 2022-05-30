@@ -24,16 +24,16 @@ export const H3 = styled.h3`
 `
 
 export const H4 = styled.h4`
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   @media (min-width: ${mediaMinWidth}) {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 `
 
 export const H5 = styled.h5`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   @media (min-width: ${mediaMinWidth}) {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 `
 

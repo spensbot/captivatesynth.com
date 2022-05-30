@@ -4,7 +4,7 @@ import useBounds from '../hooks/useBounds'
 import demo from '../../static/captivate_demo_1.mp4'
 import { opacity } from './Header'
 import VolumeOffIcon from '@mui/icons-material/VolumeOff'
-import VolumeUpIcon from '@mui/icons-material/VolumeUp'
+import VolumeOnIcon from '@mui/icons-material/VolumeUp'
 
 export default function Title() {
   const [rootRef, bounds] = useBounds()
@@ -63,9 +63,9 @@ export default function Title() {
       <MuteWrapper>
         <MuteButton onClick={updateMuted}>
           {muted ? (
-            <VolumeUpIcon color="inherit" fontSize="inherit" />
-          ) : (
             <VolumeOffIcon color="inherit" fontSize="inherit" />
+          ) : (
+            <VolumeOnIcon color="inherit" fontSize="inherit" />
           )}
         </MuteButton>
       </MuteWrapper>

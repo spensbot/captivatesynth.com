@@ -2,11 +2,25 @@ import * as React from 'react'
 import styled from 'styled-components'
 import logo from '../../static/Thick.png'
 import { mediaMinWidth } from './styled'
+import MenuButton from './MenuButton'
 
 const speed = 0.1
 export const opacity = 0.7
 
-export default function Header() {
+export default function WrappedHeader({ expanded }) {
+  if (expanded) {
+    return <Header expanded fixed />
+  } else {
+    return (
+      <>
+        <Header />
+        <Header fixed />
+      </>
+    )
+  }
+}
+
+function Header({ expanded, fixed }) {
   const [ease, setEase] = React.useState(1)
 
   React.useEffect(() => {
@@ -29,41 +43,48 @@ export default function Header() {
     }
   }, [ease])
 
-  const backgroundColor = `rgba(0, 0, 0, ${1 - ease * (1 - opacity)})`
+  const outEase = expanded ? ease : 0
+
+  const backgroundColor = `rgba(0, 0, 0, ${1 - outEase * (1 - opacity)})`
   const boxShadow = `0px 0px 15px 0px ${backgroundColor}`
 
   return (
     <Root
       style={{
-        padding: `${ease * 0.5 + 0.0}rem 1rem`,
+        position: fixed ? 'fixed' : undefined,
+        padding: `${outEase * 0.5 + 0.0}rem 1rem`,
         backgroundColor: backgroundColor,
         boxShadow: boxShadow,
         WebkitBoxShadow: boxShadow,
       }}
     >
-      <Title style={{ fontSize: `${ease * 0.7 + 1.3}rem` }}>Captivate</Title>
-      <TitleIcon
-        src={logo}
-        style={{ width: `${ease * 0.7 + 2.0}rem` }}
-        alt="Captivate Logo (an RGB cube)"
-      ></TitleIcon>
-      <Spacer />
-      <SubTitle style={{ fontSize: `${ease * 0.5 + 1}rem` }}>
-        Lighting & Visual Synth
-      </SubTitle>
+      <FlexWrap>
+        <Title style={{ fontSize: `${outEase * 0.7 + 1.3}rem` }}>
+          Captivate
+        </Title>
+        <TitleIcon
+          src={logo}
+          style={{ width: `${outEase * 0.7 + 2.0}rem` }}
+          alt="Captivate Logo (an RGB cube)"
+        ></TitleIcon>
+        <Spacer />
+        <SubTitle style={{ fontSize: `${outEase * 0.5 + 1}rem` }}>
+          Lighting & Visual Synth
+        </SubTitle>
+      </FlexWrap>
+      <div style={{ width: '1rem' }} />
+      <MenuButton />
     </Root>
   )
 }
 
 const Root = styled.div`
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
   align-items: center;
   color: #eee;
-  flex-wrap: wrap;
   box-sizing: border-box;
   z-index: 100;
 `
@@ -93,4 +114,12 @@ const SubTitle = styled.h1`
     font-size: 2rem;
   } */
   color: #aaa;
+`
+
+const FlexWrap = styled.div`
+  display: flex;
+  align-items: center;
+  color: #eee;
+  flex-grow: 1;
+  flex-wrap: wrap;
 `

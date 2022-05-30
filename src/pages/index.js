@@ -1,29 +1,17 @@
 import * as React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
 import { H1, H2, H3, H4, H5, P, mediaMinWidth } from '../components/styled'
 import gifUniverse from '../../static/captivate-universe.gif'
 import gifLightScenes from '../../static/captivate-light-scenes.gif'
 import gifVisualScenes from '../../static/captivate-visual-scenes.gif'
 import gifMixer from '../../static/captivate-mixer.gif'
-import Header from '../components/Header'
 import me from '../../static/me_serious.jpg'
 import Section from '../components/Section'
-import Footer from '../components/Footer'
-import Button from '../components/Button'
 import Title from '../components/Title'
-
-const GlobalStyle = createGlobalStyle`
-  html {
-    color: #080808;
-    background-color: #000;
-  }
-
-  body {
-    font-family: "Montserrat", "Roboto", "Helvetica", "Arial", sans-serif;
-    margin: 0;
-    background-color: #f8f8f8;
-  }
-`
+import Page from '../components/Page'
+import styled from 'styled-components'
+import JustTheBeginning from '../index/JustTheBeginning'
+import BISF from '../index/BISF'
+import Download from '../index/Download'
 
 // markup
 export default function IndexPage() {
@@ -33,10 +21,7 @@ export default function IndexPage() {
     return isAlternate
   }
   return (
-    <Root>
-      <GlobalStyle />
-      <title>Captivate Lighting and Visual Synth</title>
-      <Header />
+    <Page pageName="Home" expandedHeader>
       <Title />
       <Section alternate={alternate()} flex>
         <SubSection>
@@ -54,29 +39,26 @@ export default function IndexPage() {
         <SubSection>
           <H3>
             Beautiful. {/* Powerful. */}
-            <br />
-            Intuitive.
-            <br />
+            {/* <br /> */}
+            Intuitive. {/* <br /> */}
             Fun.
           </H3>
         </SubSection>
       </Section>
-      <Section alternate={alternate()} flex>
+      <Section alterate={alternate()}>
         <SubSection>
-          <H3>Intuitive.</H3>
+          <H3>Synchronized</H3>
           <P>
-            Let Captivate automate the show for you, or plug in a midi
-            controller and "play" your visuals like an instrument.
+            Ableton Link Integration Allows Captivate to Sync bpm with any other
+            Link-Enabled Product
           </P>
-          <H3>Synchronized.</H3>
-          <P>
-            Ableton Link integration allows lights and visuals to synchonize
-            automatically with other software
-          </P>
-          <H3>Fun.</H3>
-          <P>With captivate, designing visuals is a blast</P>
         </SubSection>
       </Section>
+      {/* <Section alternate={alternate()} flex>
+        <SubSection>
+          <BISF />
+        </SubSection>
+      </Section> */}
       <Section alternate={alternate()} flex>
         <SubSection>
           <H3>Add Dimension To Your DMX Universe</H3>
@@ -85,6 +67,7 @@ export default function IndexPage() {
             Tell Captivate which fixtures you have, and where they are located
             in space.
           </P>
+          <P>Add fixtures seamlessly, without the need to update scenes.</P>
           <img
             src={gifUniverse}
             style={{ width: '100%' }}
@@ -99,9 +82,9 @@ export default function IndexPage() {
           <H3>Breathtaking Lighting</H3>
           <P>
             With captivate, hundreds of DMX channels boil down to a handful of
-            intuitive parameters, including:
+            intuitive parameters
           </P>
-          <ul>
+          {/* <ul>
             <li>Hue</li>
             <li>Saturation</li>
             <li>Brightness</li>
@@ -109,11 +92,13 @@ export default function IndexPage() {
             <li>Y</li>
             <li>Strobe</li>
             <li>and more...</li>
-          </ul>
+          </ul> */}
           <P>
-            Take control of the parameters live, or automate them with
+            Take control of these parameters live, or automate them with
             captivate's familiar, synth-like modulation tools.
           </P>
+          {/* <P>This approach is what makes captivate so simple and fun.</P> */}
+          <P>Light groups allow you to add complexity as needed</P>
           <img
             src={gifLightScenes}
             style={{ width: '100%' }}
@@ -127,12 +112,12 @@ export default function IndexPage() {
         <SubSection>
           <H3>Stunning Visuals</H3>
           <P>
-            Curate a set of visualizations for each show.
-            <br />
-            <br />
-            Captivate's customizable visualizations listen to the parameters
-            from the active light scene so lighing and visuals are automatically
-            synchronized.
+            Combine visualizers and effects in any way to perfect your visual
+            experience
+          </P>
+          <P>
+            Visualizers and effects listen to the parameters from the active
+            light scene so lighing and visuals are automatically synchronized.
           </P>
           <img
             src={gifVisualScenes}
@@ -144,8 +129,12 @@ export default function IndexPage() {
       </Section>
       <Section alternate={alternate()} flex>
         <SubSection>
-          <H3>The Tools you Need</H3>
-          <P>View all 512 channels live. Take control when you need.</P>
+          <H3>Streamlined Complexity</H3>
+          <P>
+            With Captivate, you'll forget there are 512 DMX channels running
+            behind then scenes
+          </P>
+          {/* <P>But you can still access them when you need to</P> */}
           <img
             src={gifMixer}
             style={{ width: '100%' }}
@@ -156,19 +145,7 @@ export default function IndexPage() {
       </Section>
       <Section alternate={alternate()}>
         <SubSection>
-          <H3>And this is just the beginning</H3>
-          <P>
-            We have lots of ideas to make Captivate more powerful and flexible
-          </P>
-          <H4>Features include:</H4>
-          <ul>
-            <li>More & improved visualizations</li>
-            <li>Share scenes with other captivate users</li>
-            <li>More parameters & custom parameters</li>
-            <li>More & improved modulators</li>
-            <li>Lighting groups</li>
-            <li>Visual layers</li>
-          </ul>
+          <JustTheBeginning />
         </SubSection>
       </Section>
       <Section alternate={alternate()} flex>
@@ -201,35 +178,35 @@ export default function IndexPage() {
       </Section>
       <Section alternate={alternate()}>
         <SubSection>
-          <H3>Necessary Equipment</H3>
+          <H3>Recommended Equipment</H3>
+          <H5>For DMX Lighting</H5>
           <P>
-            Captivate should work with any ENTTEC USB Pro DMX device such as the
+            Captivate Requires a USB Pro DMX device such as the{' '}
+            <LightLink href="https://www.enttec.com/product/lighting-communication-protocols/dmx512/dmx-usb-interface/">
+              ENNTEC USB Pro
+            </LightLink>{' '}
+            or the{' '}
+            <LightLink href="https://dmxking.com/usbdmx/ultradmxmicro">
+              DMX King Ultra DMX Micro
+            </LightLink>
           </P>
-          <a href="https://www.enttec.com/product/lighting-communication-protocols/dmx512/dmx-usb-interface/">
-            ENNTEC USB Pro
-          </a>
-          <P>or the</P>
-          <a href="https://dmxking.com/usbdmx/ultradmxmicro">
-            DMX King Ultra DMX Micro
-          </a>
+          <H5>For Visuals</H5>
+          <P>
+            Captivate's Visualizer Engine runs best on a computer with a
+            dedicated GPU.
+          </P>
+          <P>A base M1 Macbook Air works great.</P>
         </SubSection>
       </Section>
       <Section alternate={alternate()}>
+        <a id="download" />
         <SubSection>
-          <H3>Download</H3>
-          <Row>
-            <Button>Mac (intel)</Button>
-            <Button>Mac (arm)</Button>
-          </Row>
-          <H5>Windows & Linux support coming soon</H5>
+          <Download />
         </SubSection>
       </Section>
-      <Footer />
-    </Root>
+    </Page>
   )
 }
-
-const Root = styled.main``
 
 const SubSection = styled.div`
   flex: 1 0 0;
@@ -240,4 +217,8 @@ const SubSection = styled.div`
 const Row = styled.div`
   display: flex;
   align-items: center;
+`
+
+const LightLink = styled.a`
+  color: #aaf;
 `
