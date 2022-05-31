@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import logo from '../../static/Thick.png'
 import { mediaMinWidth } from './styled'
 import MenuButton from './MenuButton'
+import zIndexes from '../zIndexes'
 
 const speed = 0.1
-export const opacity = 0.7
+const opacity = 0.7
 
 export default function WrappedHeader({ expanded }) {
   if (expanded) {
@@ -13,14 +14,14 @@ export default function WrappedHeader({ expanded }) {
   } else {
     return (
       <>
-        <Header />
+        <Header invisible />
         <Header fixed />
       </>
     )
   }
 }
 
-function Header({ expanded, fixed }) {
+function Header({ expanded, fixed, invisible }) {
   const [ease, setEase] = React.useState(1)
 
   React.useEffect(() => {
@@ -56,6 +57,7 @@ function Header({ expanded, fixed }) {
         backgroundColor: backgroundColor,
         boxShadow: boxShadow,
         WebkitBoxShadow: boxShadow,
+        visibility: !invisible,
       }}
     >
       <FlexWrap>
@@ -86,7 +88,7 @@ const Root = styled.div`
   align-items: center;
   color: #eee;
   box-sizing: border-box;
-  z-index: 100;
+  z-index: ${zIndexes.header};
 `
 
 const Title = styled.h1`

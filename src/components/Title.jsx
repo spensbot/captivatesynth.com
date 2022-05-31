@@ -55,8 +55,11 @@ export default function Title() {
       </video>
 
       <TitleTextContainer>
-        <TitleText>
+        {/* <TitleText>
           Live Visuals and DMX Lighting that dynamically synchronizes to music.
+        </TitleText> */}
+        <TitleText style={{ marginRight: '1rem' }}>
+          Live, synchronized visuals and lighting.
         </TitleText>
         <TitleText>Free - Open Source</TitleText>
       </TitleTextContainer>

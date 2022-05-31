@@ -5,10 +5,17 @@ import Section from '../components/Section'
 
 export default function TermsAndConditionsPage() {
   return (
-    <Page pageName="Terms And Conditions">
+    <Page
+      pageName="Terms And Conditions"
+      pageDescription={`Terms and Conitions for Captivate Lighting and Visual Synth`}
+    >
       <Section>
         <H2>Terms And Conditions</H2>
         <P>1. Have Fun! This is non-negotiable</P>
+        <P>
+          2. Captivate is beta software and is undergoing active development.
+          Use at your own risk.
+        </P>
         <P>
           2. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
           EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF

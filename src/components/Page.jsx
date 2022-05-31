@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import Footer from '../components/Footer'
 import Header from './Header'
+import Helmet from 'react-helmet'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -17,12 +18,27 @@ const GlobalStyle = createGlobalStyle`
 `
 
 // markup
-export default function Page({ pageName, children, expandedHeader }) {
+export default function Page({
+  pageName,
+  children,
+  expandedHeader,
+  pageDescription,
+}) {
   return (
     <Root>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="description" content={pageDescription} />
+        <meta
+          name="keywords"
+          content="Captivate, Lighting, DMX, Stage, Visuals, Visualizer, Music"
+        />
+        <meta name="author" content="John Doe" />
+        <title>Captivate Lighting and Visual Synth: {pageName}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <GlobalStyle />
-      <title>Captivate Lighting and Visual Synth: {pageName}</title>
-      <Header expanded={expandedHeader} />
+      <Header expanded={expandedHeader} fixed />
       {children}
       <Footer />
     </Root>

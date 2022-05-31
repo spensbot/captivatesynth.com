@@ -4,7 +4,7 @@ import gifUniverse from '../../static/captivate-universe.gif'
 import gifLightScenes from '../../static/captivate-light-scenes.gif'
 import gifVisualScenes from '../../static/captivate-visual-scenes.gif'
 import gifMixer from '../../static/captivate-mixer.gif'
-import me from '../../static/me_serious.jpg'
+import me from '../../static/me_serious.png'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Page from '../components/Page'
@@ -21,7 +21,11 @@ export default function IndexPage() {
     return isAlternate
   }
   return (
-    <Page pageName="Home" expandedHeader>
+    <Page
+      pageName="Home"
+      expandedHeader
+      pageDescription={`An app for generating live visuals and lighting that synchronize to music.`}
+    >
       <Title />
       <Section alternate={alternate()} flex>
         <SubSection>
