@@ -10,20 +10,10 @@ export default function GettingStartedPage() {
       pageDescription={`Tutorials for Captivate Lighting and Visual Synth`}
     >
       <Section>
-        <H2>Terms And Conditions</H2>
-        <P>1. Have Fun! This is non-negotiable</P>
+        <H2>Getting Started</H2>
         <P>
-          2. Captivate is beta software and is undergoing active development.
-          Use at your own risk.
-        </P>
-        <P>
-          2. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-          EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-          MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-          IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-          CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-          TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-          SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+          If you haven't already, be sure to{' '}
+          <a href="/#download">download captivate</a>
         </P>
       </Section>
     </Page>

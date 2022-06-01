@@ -6,7 +6,7 @@ import gifVisualScenes from '../../static/captivate-visual-scenes.gif'
 import gifMixer from '../../static/captivate-mixer.gif'
 import me from '../../static/me_serious.png'
 import Section from '../components/Section'
-import Title from '../components/Title'
+import Title from '../index/Title'
 import Page from '../components/Page'
 import styled from 'styled-components'
 import JustTheBeginning from '../index/JustTheBeginning'
@@ -27,6 +27,16 @@ export default function IndexPage() {
       pageDescription={`An app for generating live visuals and lighting that synchronize to music.`}
     >
       <Title />
+      <Section alternate={alternate()} flex>
+        <SubSection>
+          {/* <H3>Ready to Impress?</H3> */}
+          <H3>Create A Lasting Impression</H3>
+          <P>
+            Captivate generates live visuals and dmx lighting that synchronize
+            to music
+          </P>
+        </SubSection>
+      </Section>
       <Section alternate={alternate()} flex>
         <SubSection>
           {/* <H3>Ready to Impress?</H3> */}
@@ -206,6 +216,15 @@ export default function IndexPage() {
         <a id="download" />
         <SubSection>
           <Download />
+        </SubSection>
+      </Section>
+      <Section alternate={alternate()}>
+        <SubSection>
+          <H2>What Next?</H2>
+          <P>
+            Check out our{' '}
+            <LightLink href="/getting_started">getting started guide</LightLink>
+          </P>
         </SubSection>
       </Section>
     </Page>

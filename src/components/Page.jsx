@@ -33,7 +33,7 @@ export default function Page({
           name="keywords"
           content="Captivate, Lighting, DMX, Stage, Visuals, Visualizer, Music"
         />
-        <meta name="author" content="John Doe" />
+        <meta name="author" content="Spenser Saling" />
         <title>Captivate Lighting and Visual Synth: {pageName}</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>

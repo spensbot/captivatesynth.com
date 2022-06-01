@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import useBounds from '../hooks/useBounds'
 import demo from '../../static/captivate_demo_1.mp4'
-import { opacity } from './Header'
+import { opacity } from '../components/Header'
 import VolumeOffIcon from '@mui/icons-material/VolumeOff'
 import VolumeOnIcon from '@mui/icons-material/VolumeUp'
 
@@ -32,7 +32,7 @@ export default function Title() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe> */}
-      {/* <iframe
+      <iframe
         width="100%"
         height={`${bounds?.height || 0}`}
         src="https://www.youtube.com/embed/Nf50Aefpaag?controls=0&amp;start=135&mute=1&autoplay=1&modestbranding=1&loop=1&showinfo=0"
@@ -40,8 +40,8 @@ export default function Title() {
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-      ></iframe> */}
-      <video
+      ></iframe>
+      {/* <video
         width="100%"
         height={`${bounds?.height || 0}`}
         style={{ objectFit: 'cover' }}
@@ -52,17 +52,17 @@ export default function Title() {
         ref={videoRef}
       >
         <source src={demo} type="video/mp4" />
-      </video>
+      </video> */}
 
-      <TitleTextContainer>
-        {/* <TitleText>
+      {/* <TitleTextContainer>
+        <TitleText>
           Live Visuals and DMX Lighting that dynamically synchronizes to music.
-        </TitleText> */}
+        </TitleText>
         <TitleText style={{ marginRight: '1rem' }}>
           Live, synchronized visuals and lighting.
         </TitleText>
         <TitleText>Free - Open Source</TitleText>
-      </TitleTextContainer>
+      </TitleTextContainer> */}
       <MuteWrapper>
         <MuteButton onClick={updateMuted}>
           {muted ? (
