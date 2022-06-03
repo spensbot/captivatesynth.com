@@ -1,4 +1,4 @@
-# [https://captivatesynth.com/](CaptivateSynth.com)
+# [CaptivateSynth.com](https://captivatesynth.com/)
 
 The official website for Captivate, the Lighting and Visual Synth: [https://captivatesynth.com/](https://captivatesynth.com/)
 
