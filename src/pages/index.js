@@ -59,7 +59,7 @@ export default function IndexPage() {
           </H3>
         </SubSection>
       </Section>
-      <Section alterate={alternate()}>
+      <Section alternate={alternate()}>
         <SubSection>
           <H3>Synchronized</H3>
           <P>
@@ -212,8 +212,8 @@ export default function IndexPage() {
           <P>A base M1 Macbook Air works great.</P>
         </SubSection>
       </Section>
+      <a id="download" />
       <Section alternate={alternate()}>
-        <a id="download" />
         <SubSection>
           <Download />
         </SubSection>
