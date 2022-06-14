@@ -11,13 +11,17 @@ export default function TermsAndConditionsPage() {
     >
       <Section>
         <H2>Terms And Conditions</H2>
-        <P>1. Have Fun! This is non-negotiable</P>
+        <H4>1. Have Fun</H4>
+        <P>This is non-negotiable.</P>
+        <H4>2. Accept The Risks of Using Beta Software</H4>
         <P>
-          2. Captivate is beta software and is undergoing active development.
-          Use at your own risk.
+          Captivate is beta software and is undergoing active development. The
+          software may not work reliably or at all. Features are subject to
+          change without notice. Use at your own risk.
         </P>
+        <H4>3. Don't Sue Me</H4>
         <P>
-          2. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
           EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
           MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
           IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY

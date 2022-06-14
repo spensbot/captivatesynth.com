@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import Checkbox from '@mui/material/Checkbox'
 import { H1, H2, H3, H4, H5, P, mediaMinWidth } from '../components/styled'
 import DownloadButton from '../components/DownloadButton'
-
-const CAPTIVATE_VERSION = '0.9.3'
+import { MAC_X86_FILENAME, MAC_ARM_FILENAME } from '../strings'
 
 export default function Download() {
   const [accepted, setAccepted] = useState(false)
@@ -26,19 +25,11 @@ export default function Download() {
         </P>
       </Row>
       <Row style={{ margin: '0 -1rem' }}>
-        <DownloadButton
-          enabled={accepted}
-          href={`https://github.com/spensbot/captivate/releases/download/0.9.3/Captivate-${CAPTIVATE_VERSION}.dmg`}
-          download={`Captivate-${CAPTIVATE_VERSION}.dmg`}
-        >
+        <DownloadButton enabled={accepted} filename={MAC_X86_FILENAME}>
           Mac (intel)
         </DownloadButton>
-        <DownloadButton
-          enabled={accepted}
-          href={`https://github.com/spensbot/captivate/releases/download/0.9.3/Captivate-${CAPTIVATE_VERSION}-arm64.dmg`}
-          download={`Captivate-${CAPTIVATE_VERSION}-arm64.dmg`}
-        >
-          Mac (M1)
+        <DownloadButton enabled={accepted} filename={MAC_ARM_FILENAME}>
+          Mac (arm)
         </DownloadButton>
       </Row>
       <P>Windows & Linux support coming soon</P>

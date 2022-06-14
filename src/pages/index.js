@@ -29,43 +29,39 @@ export default function IndexPage() {
       <Title />
       <Section alternate={alternate()} flex>
         <SubSection>
-          {/* <H3>Ready to Impress?</H3> */}
-          <H3>Create A Lasting Impression</H3>
+          <H3>Ready to Impress?</H3>
+          {/* <H3>Create A Lasting Impression</H3> */}
           <P>
-            Captivate generates live visuals and dmx lighting that synchronize
-            to music
+            Captivate generates live visuals and dmx lighting. All synchronized
+            to music.
           </P>
-        </SubSection>
-      </Section>
-      <Section alternate={alternate()} flex>
-        <SubSection>
-          {/* <H3>Ready to Impress?</H3> */}
-          <H3>Create A Lasting Impression</H3>
-          <P>Great lighting and visuals bring music to life</P>
-          <P>
-            With Captivate, creating a visual experience is every bit as fun and
-            satifying as playing an instrument.
-          </P>
-          <P> This is how visual creation is supposed to feel</P>
-        </SubSection>
-      </Section>
-      <Section alternate={alternate()} flex>
-        <SubSection>
-          <H3>
+          <H5>
             Beautiful. {/* Powerful. */}
             {/* <br /> */}
             Intuitive. {/* <br /> */}
             Fun.
-          </H3>
+          </H5>
+          <P>
+            With Captivate's revolutionary approach to lighting, creating a
+            visual experience is every bit as fun and satifying as playing an
+            instrument
+          </P>
         </SubSection>
       </Section>
-      <Section alternate={alternate()}>
+      <Section alternate={alternate()} flex>
         <SubSection>
-          <H3>Synchronized</H3>
-          <P>
-            Ableton Link Integration Allows Captivate to Sync bpm with any other
-            Link-Enabled Product
-          </P>
+          <H3>This is how visual creation is supposed to feel</H3>
+          <p>Insert video</p>
+        </SubSection>
+      </Section>
+      <Section alternate={alternate()} flex>
+        <SubSection>
+          <H3>Always Synchronized</H3>
+          <P>Captivate synchronizes to music automatically with Ableton Link</P>
+          <H3>Free & Open Source</H3>
+          <a href="https://github.com/spensbot/captivate">
+            View the code on Github
+          </a>
         </SubSection>
       </Section>
       {/* <Section alternate={alternate()} flex>
@@ -218,7 +214,7 @@ export default function IndexPage() {
           <Download />
         </SubSection>
       </Section>
-      <Section alternate={alternate()}>
+      {/* <Section alternate={alternate()}>
         <SubSection>
           <H2>What Next?</H2>
           <P>
@@ -226,7 +222,7 @@ export default function IndexPage() {
             <LightLink href="/getting_started">getting started guide</LightLink>
           </P>
         </SubSection>
-      </Section>
+      </Section> */}
     </Page>
   )
 }

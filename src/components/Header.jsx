@@ -22,7 +22,7 @@ export default function WrappedHeader({ expanded }) {
 }
 
 function Header({ expanded, fixed, invisible }) {
-  const [ease, setEase] = React.useState(1)
+  const [ease, setEase] = React.useState(0)
 
   React.useEffect(() => {
     const animate = () => {

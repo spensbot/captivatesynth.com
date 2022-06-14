@@ -1,11 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { download_url } from '../strings'
 
-export default function DownloadButton({ href, download, enabled, children }) {
+export default function DownloadButton({ filename, enabled, children }) {
   return (
     <Root
-      href={enabled ?? href}
-      download={enabled ?? download}
+      href={enabled ? download_url(filename) : undefined}
+      download={enabled ? filename : undefined}
       enabled={enabled}
     >
       {children}
@@ -22,6 +23,7 @@ const Root = styled.a`
   border-radius: 0.5rem;
   margin: 1rem;
   font-size: 1rem;
+  user-select: none;
   ${(p) =>
     p.enabled
       ? `  cursor: pointer;
