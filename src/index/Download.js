@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Checkbox from '@mui/material/Checkbox'
 import { H1, H2, H3, H4, H5, P, mediaMinWidth } from '../components/styled'
-import Button from '../components/Button'
+import DownloadButton from '../components/DownloadButton'
+
+const CAPTIVATE_VERSION = '0.9.3'
 
 export default function Download() {
   const [accepted, setAccepted] = useState(false)
@@ -24,8 +26,20 @@ export default function Download() {
         </P>
       </Row>
       <Row style={{ margin: '0 -1rem' }}>
-        <Button enabled={accepted}>Mac (intel)</Button>
-        <Button enabled={accepted}>Mac (arm)</Button>
+        <DownloadButton
+          enabled={accepted}
+          href={`https://github.com/spensbot/captivate/releases/download/0.9.3/Captivate-${CAPTIVATE_VERSION}.dmg`}
+          download={`Captivate-${CAPTIVATE_VERSION}.dmg`}
+        >
+          Mac (intel)
+        </DownloadButton>
+        <DownloadButton
+          enabled={accepted}
+          href={`https://github.com/spensbot/captivate/releases/download/0.9.3/Captivate-${CAPTIVATE_VERSION}-arm64.dmg`}
+          download={`Captivate-${CAPTIVATE_VERSION}-arm64.dmg`}
+        >
+          Mac (M1)
+        </DownloadButton>
       </Row>
       <P>Windows & Linux support coming soon</P>
     </>
