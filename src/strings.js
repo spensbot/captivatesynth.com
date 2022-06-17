@@ -1,4 +1,4 @@
-export const CAPTIVATE_VERSION = `0.9.4`
+export const CAPTIVATE_VERSION = `0.9.6`
 export const MAC_X86_FILENAME = `Captivate-${CAPTIVATE_VERSION}.dmg`
 export const MAC_ARM_FILENAME = `Captivate-${CAPTIVATE_VERSION}-arm64.dmg`
 export function download_url(filename) {

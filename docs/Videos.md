@@ -7,7 +7,7 @@ Just some cool visuals and lighting over a song ~ 1 minute?
 ## Promo Video Monologue 1
 
 Welcome to Captivate. The lighting and visual synth.
-Captivate is live-generating this lighting and visuals. And it's all dynamically synchronized to the music.
+Captivate is generating these lighting and visuals live. And it's all dynamically synchronized to the music.
 
 If I change tempo, everything adjusts
 
@@ -17,20 +17,20 @@ And when the beats drops.
 
 Captivate empowers musicians, djs, and hobbyists to compliment their sound with a visual experience that just works.
 
-It's free and open source. We can't wait so see what you create. (Go make something awesome)
+It's free and open source, and we can't wait so see what you create. (Go make something awesome)
 
 ## Promo Video Monologue 2
 
 Welcome to Captivate. The lighting and visual synth.
-Captivate is live-generating this lighting and visuals. And it's all dynamically synchronized to the music.
+Captivate is live-generating these lighting and visuals. And it's all dynamically synchronized to the music.
 
-Music is dynamic and fun and intuitive. Creating a visual experience should be just as rewarding
+Music is dynamic, fun and intuitive. Creating a visual experience should feel just as good
 
 Years ago, we set out to create a lighing app inspired by our favorite music software. The result is incredible, but most importantly, it's incredibly fun and easy to use.
 
-Captivate accomplishes this with a revolutionary and intutive approach that streamlines the complexity of a DMX universe, and empowers users to add complexity when and where they need it.
+Captivate accomplishes this with a revolutionary and intutive approach that streamlines the complexity of a DMX universe, and empowering users to add complexity when and where they need it.
 
-It's free and open source. We can't wait so see what you create. (Go make something awesome)
+It's free and open source. Go make something awesome.
 
 ## Tutorial 1: DMX Universe Setup
 

@@ -16,6 +16,7 @@ export default function Menu({ onClose }) {
           DOWNLOAD
         </MenuItem>
         <MenuItem href="/getting_started">GETTING STARTED</MenuItem>
+        <MenuItem href="/recommended_equipment">RECOMMENDED EQUIPMENT</MenuItem>
         <MenuItem href="/terms_and_conditions">TERMS & CONDITIONS</MenuItem>
       </MenuRoot>
     </>
