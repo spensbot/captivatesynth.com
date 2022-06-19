@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { H1, H2, H3, H4, H5, P, mediaMinWidth } from '../components/styled'
+import { H1, H2, H3, H4, H5, H6, P, mediaMinWidth } from '../components/styled'
 import gifUniverse from '../../static/captivate-universe.gif'
 import gifLightScenes from '../../static/captivate-light-scenes.gif'
 import gifVisualScenes from '../../static/captivate-visual-scenes.gif'
@@ -50,7 +50,7 @@ export default function IndexPage() {
       </Section>
       <Section alternate={alternate()} flex>
         <SubSection>
-          <H3>This is how visual creation is supposed to feel</H3>
+          <H3>How visual creation is supposed to feel</H3>
           <p>Insert video</p>
         </SubSection>
       </Section>
@@ -188,10 +188,14 @@ export default function IndexPage() {
       </Section>
       <Section alternate={alternate()}>
         <SubSection>
-          <H3>Recommended Equipment</H3>
+          <H3>Required Equipment</H3>
+          <P>
+            Captivate runs on MacOS 10.11 (El Capitan) and up. Windows and Linux
+            support coming soon
+          </P>
           <H5>For DMX Lighting</H5>
           <P>
-            Captivate Requires a USB Pro DMX device such as the{' '}
+            Captivate is designed to work with the{' '}
             <LightLink href="https://www.enttec.com/product/lighting-communication-protocols/dmx512/dmx-usb-interface/">
               ENNTEC USB Pro
             </LightLink>{' '}
@@ -205,7 +209,13 @@ export default function IndexPage() {
             Captivate's Visualizer Engine runs best on a computer with a
             dedicated GPU.
           </P>
-          <P>A base M1 Macbook Air works great.</P>
+          <H6>
+            Checkout out the{' '}
+            <LightLink href="/recommended_equipment">
+              Recommended Equipment
+            </LightLink>{' '}
+            page for more info
+          </H6>
         </SubSection>
       </Section>
       <a id="download" />

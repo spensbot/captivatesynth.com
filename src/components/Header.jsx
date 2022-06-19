@@ -60,7 +60,7 @@ function Header({ expanded, fixed, invisible }) {
         visibility: !invisible,
       }}
     >
-      <FlexWrap>
+      <FlexWrap onClick={(e) => (window.location.href = '/')}>
         <Title style={{ fontSize: `${outEase * 0.7 + 1.3}rem` }}>
           Captivate
         </Title>
@@ -124,4 +124,5 @@ const FlexWrap = styled.div`
   color: #eee;
   flex-grow: 1;
   flex-wrap: wrap;
+  cursor: pointer;
 `

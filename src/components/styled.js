@@ -37,6 +37,13 @@ export const H5 = styled.h5`
   }
 `
 
+export const H6 = styled.h6`
+  font-size: 1.1rem;
+  @media (min-width: ${mediaMinWidth}) {
+    font-size: 1.3rem;
+  }
+`
+
 export const P = styled.p`
   font-size: 1rem;
 `

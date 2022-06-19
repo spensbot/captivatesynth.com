@@ -18,6 +18,7 @@ export default function Menu({ onClose }) {
         <MenuItem href="/getting_started">GETTING STARTED</MenuItem>
         <MenuItem href="/recommended_equipment">RECOMMENDED EQUIPMENT</MenuItem>
         <MenuItem href="/terms_and_conditions">TERMS & CONDITIONS</MenuItem>
+        <MenuItem href="/community">COMMUNITY</MenuItem>
       </MenuRoot>
     </>
   )
