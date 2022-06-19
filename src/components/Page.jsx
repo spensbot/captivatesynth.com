@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Montserrat", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "Raleway", "Roboto", "Helvetica", "Arial", sans-serif;
     margin: 0;
     background-color: #f8f8f8;
   }

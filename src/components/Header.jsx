@@ -22,7 +22,7 @@ export default function WrappedHeader({ expanded }) {
 }
 
 function Header({ expanded, fixed, invisible }) {
-  const [ease, setEase] = React.useState(0)
+  const [ease, setEase] = React.useState(1)
 
   React.useEffect(() => {
     const animate = () => {
@@ -46,14 +46,15 @@ function Header({ expanded, fixed, invisible }) {
 
   const outEase = expanded ? ease : 0
 
-  const backgroundColor = `rgba(0, 0, 0, ${1 - outEase * (1 - opacity)})`
+  // const backgroundColor = `rgba(0, 0, 0, ${1 - outEase * (1 - opacity)})`
+  const backgroundColor = 'rgba(0, 0, 0, 1)'
   const boxShadow = `0px 0px 15px 0px ${backgroundColor}`
 
   return (
     <Root
       style={{
         position: fixed ? 'fixed' : undefined,
-        padding: `${outEase * 0.5 + 0.0}rem 1rem`,
+        padding: `${outEase * 1 + 0.5}rem 1rem`,
         backgroundColor: backgroundColor,
         boxShadow: boxShadow,
         WebkitBoxShadow: boxShadow,
@@ -61,16 +62,14 @@ function Header({ expanded, fixed, invisible }) {
       }}
     >
       <FlexWrap onClick={(e) => (window.location.href = '/')}>
-        <Title style={{ fontSize: `${outEase * 0.7 + 1.3}rem` }}>
-          Captivate
-        </Title>
+        <Title style={{ fontSize: `${outEase * 2 + 1.3}rem` }}>Captivate</Title>
         <TitleIcon
           src={logo}
-          style={{ width: `${outEase * 0.7 + 2.0}rem` }}
-          alt="Captivate Logo (an RGB cube)"
+          style={{ width: `${outEase * 0.7 + 2.0}rem`, opacity: 1 - outEase }}
+          alt="Captivate Logo (a red, green, and blue cube)"
         ></TitleIcon>
         <Spacer />
-        <SubTitle style={{ fontSize: `${outEase * 0.5 + 1}rem` }}>
+        <SubTitle style={{ fontSize: `${outEase * 1 + 1}rem` }}>
           Lighting & Visual Synth
         </SubTitle>
       </FlexWrap>
@@ -96,6 +95,7 @@ const Title = styled.h1`
   @media (min-width: ${mediaMinWidth}) {
     font-size: 3rem;
   } */
+  margin: 0;
 `
 
 const TitleIcon = styled.img`
@@ -116,6 +116,7 @@ const SubTitle = styled.h1`
     font-size: 2rem;
   } */
   color: #aaa;
+  margin: 0;
 `
 
 const FlexWrap = styled.div`

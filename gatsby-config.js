@@ -46,6 +46,8 @@ module.exports = {
           `limelight`,
           `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
           `Montserrat\:100,200,300,400`,
+          `Raleway\:100,200,300,400`,
+          `Quicksand\:300,400`,
         ],
         display: 'swap',
       },

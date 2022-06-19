@@ -4,6 +4,10 @@ import gifUniverse from '../../static/captivate-universe.gif'
 import gifLightScenes from '../../static/captivate-light-scenes.gif'
 import gifVisualScenes from '../../static/captivate-visual-scenes.gif'
 import gifMixer from '../../static/captivate-mixer.gif'
+import preview_universe from '../../static/preview_universe.mp4'
+import preview_light_scenes from '../../static/preview_light_scenes.mp4'
+import preview_visualizer from '../../static/preview_visualizer.mp4'
+import preview_mixer from '../../static/preview_mixer.mp4'
 import me from '../../static/me_serious.png'
 import Section from '../components/Section'
 import Title from '../index/Title'
@@ -12,6 +16,7 @@ import styled from 'styled-components'
 import JustTheBeginning from '../index/JustTheBeginning'
 import BISF from '../index/BISF'
 import Download from '../index/Download'
+import { FixedARVideo } from '../components/FixedARVideo'
 
 // markup
 export default function IndexPage() {
@@ -35,30 +40,17 @@ export default function IndexPage() {
             Captivate generates live visuals and dmx lighting. All synchronized
             to music.
           </P>
-          <H5>
-            Beautiful. {/* Powerful. */}
-            {/* <br /> */}
-            Intuitive. {/* <br /> */}
-            Fun.
-          </H5>
+          <FixedARVideo
+            src="https://www.youtube.com/embed/6ZwQ97sySq0"
+            ar={16 / 9}
+          />
+          <P>This is how visual creation is supposed to feel</P>
+          <H4>Synchronized with Ableton Link</H4>
           <P>
-            With Captivate's revolutionary approach to lighting, creating a
-            visual experience is every bit as fun and satifying as playing an
-            instrument
+            You can also synchronize manually with tap tempo. Or wait for our
+            upcoming live beat-detection feature!
           </P>
-        </SubSection>
-      </Section>
-      <Section alternate={alternate()} flex>
-        <SubSection>
-          <H3>How visual creation is supposed to feel</H3>
-          <p>Insert video</p>
-        </SubSection>
-      </Section>
-      <Section alternate={alternate()} flex>
-        <SubSection>
-          <H3>Always Synchronized</H3>
-          <P>Captivate synchronizes to music automatically with Ableton Link</P>
-          <H3>Free & Open Source</H3>
+          <H4>Free & Open Source</H4>
           <a href="https://github.com/spensbot/captivate">
             View the code on Github
           </a>
@@ -78,9 +70,8 @@ export default function IndexPage() {
             in space.
           </P>
           <P>Add fixtures seamlessly, without the need to update scenes.</P>
-          <img
-            src={gifUniverse}
-            style={{ width: '100%' }}
+          <Video
+            src={preview_universe}
             alt={`Captivate's DMX Universe Configuration UI.
             From here you can tell Captivate what fixtures you have, what channel they are on, 
             and where they are located in space.`}
@@ -109,12 +100,10 @@ export default function IndexPage() {
           </P>
           {/* <P>This approach is what makes captivate so simple and fun.</P> */}
           <P>Light groups allow you to add complexity as needed</P>
-          <img
-            src={gifLightScenes}
-            style={{ width: '100%' }}
+          <Video
+            src={preview_light_scenes}
             alt={`Captivate's Light Scene Editor UI.
-            From here you can create lighting scenes by modulating captivate's intuitive parameters.
-            `}
+            From here you can create lighting scenes by modulating captivate's intuitive parameters.`}
           />
         </SubSection>
       </Section>
@@ -129,11 +118,9 @@ export default function IndexPage() {
             Visualizers and effects listen to the parameters from the active
             light scene so lighing and visuals are automatically synchronized.
           </P>
-          <img
-            src={gifVisualScenes}
-            style={{ width: '100%' }}
-            alt={`Captivate's Visualization Scene Creator UI.
-            `}
+          <Video
+            src={preview_visualizer}
+            alt={`Captivate's Visualization Scene Creator UI.`}
           />
         </SubSection>
       </Section>
@@ -145,12 +132,7 @@ export default function IndexPage() {
             behind then scenes
           </P>
           {/* <P>But you can still access them when you need to</P> */}
-          <img
-            src={gifMixer}
-            style={{ width: '100%' }}
-            alt={`Captivate's DMX Mixer UI.
-            `}
-          />
+          <Video src={preview_mixer} alt={`Captivate's DMX Mixer UI.`} />
         </SubSection>
       </Section>
       <Section alternate={alternate()}>
@@ -234,6 +216,23 @@ export default function IndexPage() {
         </SubSection>
       </Section> */}
     </Page>
+  )
+}
+
+function Video({ src, alt }) {
+  return (
+    <video
+      loop
+      muted
+      autoPlay
+      src={src}
+      style={{
+        width: '100%',
+        borderRadius: '1% / 1.5%',
+        boxShadow: '0 0.3rem 1rem 0 #000c',
+      }}
+      alt={alt}
+    />
   )
 }
 

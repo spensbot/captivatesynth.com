@@ -1,89 +1,44 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import useBounds from '../hooks/useBounds'
-import demo from '../../static/captivate_demo_1.mp4'
 import { opacity } from '../components/Header'
-import VolumeOffIcon from '@mui/icons-material/VolumeOff'
-import VolumeOnIcon from '@mui/icons-material/VolumeUp'
+import logo from '../../static/Thick.png'
+import { mediaMinWidth } from '../components/styled'
 
 export default function Title() {
-  const [rootRef, bounds] = useBounds()
-  const videoRef = React.useRef(null)
-  const [muted, setMuted] = React.useState(true)
-
-  let updateMuted = () => {}
-  if (videoRef.current) {
-    updateMuted = () => {
-      if (videoRef) {
-        videoRef.current.muted = !muted
-        setMuted(!muted)
-      }
-    }
-  }
-
   return (
-    <Root ref={rootRef}>
-      {/* <iframe
-        width="100%"
-        height={`${bounds?.height || 0}`}
-        src="https://www.youtube.com/embed/adxGcJfbfVc?autoplay=1"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe> */}
-      <iframe
-        width="100%"
-        height={`${bounds?.height || 0}`}
-        src="https://www.youtube.com/embed/Nf50Aefpaag?controls=0&amp;start=135&mute=1&autoplay=1&modestbranding=1&loop=1&showinfo=0"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      {/* <video
-        width="100%"
-        height={`${bounds?.height || 0}`}
-        style={{ objectFit: 'cover' }}
-        autoPlay
-        muted
-        loop
-        controlsList=""
-        ref={videoRef}
-      >
-        <source src={demo} type="video/mp4" />
-      </video> */}
-
-      {/* <TitleTextContainer>
-        <TitleText>
-          Live Visuals and DMX Lighting that dynamically synchronizes to music.
-        </TitleText>
-        <TitleText style={{ marginRight: '1rem' }}>
-          Live, synchronized visuals and lighting.
-        </TitleText>
-        <TitleText>Free - Open Source</TitleText>
-      </TitleTextContainer> */}
-      <MuteWrapper>
-        <MuteButton onClick={updateMuted}>
-          {muted ? (
-            <VolumeOffIcon color="inherit" fontSize="inherit" />
-          ) : (
-            <VolumeOnIcon color="inherit" fontSize="inherit" />
-          )}
-        </MuteButton>
-      </MuteWrapper>
+    <Root>
+      <TitleIcon
+        src={logo}
+        alt="Captivate Logo (a red, green, and blue cube)"
+      ></TitleIcon>
     </Root>
   )
 }
 
 const Root = styled.div`
   color: #eee;
-  background-color: #222;
+  background-color: #000;
   height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-const TitleText = styled.h2`
+const TitleIcon = styled.img`
+  margin-left: 0.5rem;
+  width: 10rem;
+  @media (min-width: ${mediaMinWidth}) {
+    width: 10rem;
+  }
+`
+
+const TitleText = styled.h1`
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1rem;
   font-size: 1rem;
 `
 

@@ -25,7 +25,11 @@ export default function JustTheBeginning() {
         />
         <FeatureSection
           title="Visuals"
-          items={['More & improved visualizations', 'Visualizer layers']}
+          items={[
+            'More & improved visualizations',
+            'Visualizer layers',
+            'Projection Mapping',
+          ]}
         />
         <FeatureSection
           title="Automation"

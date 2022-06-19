@@ -6,16 +6,19 @@ Just some cool visuals and lighting over a song ~ 1 minute?
 
 ## Promo Video Monologue 1
 
-Welcome to Captivate. The lighting and visual synth.
-Captivate is generating these lighting and visuals live. And it's all dynamically synchronized to the music.
+Welcome to Captivate. The lighting and visual synthesizer.
+Captivate is generating these lighting and visuals live.
+And it's all dynamically synchronized to the music with Ableton Link.
 
-If I change tempo, everything adjusts
+If I increase the tempo, everything adjusts
 
 I can turn everything blue with the push of a button
 
+I can move right and left with a single slider
+
 And when the beats drops.
 
-Captivate empowers musicians, djs, and hobbyists to compliment their sound with a visual experience that just works.
+Captivate empowers musicians to compliment their sound with a visual experience that just works.
 
 It's free and open source, and we can't wait so see what you create. (Go make something awesome)
 
