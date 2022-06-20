@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export function FixedARVideo({ src, ar }) {
+export default function FixedARVideo({ src, ar, maxWidth }) {
   return (
-    <VideoWrapper style={{ paddingBottom: `${(1 / ar) * 100}%` }}>
-      <Iframe
-        title="YouTube video player"
-        src={src}
-        frameborder="0"
-        allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      />
-    </VideoWrapper>
+    <div style={{ maxWidth: maxWidth }}>
+      <VideoWrapper style={{ paddingBottom: `${(1 / ar) * 100}%` }}>
+        <Iframe
+          title="YouTube video player"
+          src={src}
+          frameborder="0"
+          allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        />
+      </VideoWrapper>
+    </div>
   )
 }
 

@@ -1,12 +1,12 @@
 export default function randoCirclesSvg(width, height) {
-  const qty = 1000
+  const qty = 50
   const circles = new Array(qty).fill(0)
 
   return `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
     ${circles.map((_) => {
       const x = random(100)
       const y = random(100)
-      const r = randomSkewed(1, 3)
+      const r = randomSkewed(2, 3)
       return circle(x, y, r)
     })}
   </svg>`

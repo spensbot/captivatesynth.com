@@ -16,7 +16,7 @@ import styled from 'styled-components'
 import JustTheBeginning from '../index/JustTheBeginning'
 import BISF from '../index/BISF'
 import Download from '../index/Download'
-import { FixedARVideo } from '../components/FixedARVideo'
+import FixedARVideo from '../components/FixedARVideo'
 import { StaticImage } from 'gatsby-plugin-image'
 
 // markup

@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import Page from '../components/Page'
 import { H1, H2, H3, H4, H5, P, mediaMinWidth } from '../components/styled'
 import Section from '../components/Section'
+import FixedARVideo from '../components/FixedARVideo'
+
+const MAX_VID_WIDTH = '40rem'
 
 export default function GettingStartedPage() {
   return (
@@ -19,19 +22,31 @@ export default function GettingStartedPage() {
         </P>
         <H4>1. UI Overview</H4>
         <P>Familiarize yourself with Captivate's UI</P>
-        <VideoPlaceholder />
+        <FixedARVideo
+          src="https://www.youtube.com/embed/SxU32oWGrq4"
+          ar={16 / 9}
+          maxWidth={MAX_VID_WIDTH}
+        />
         <H4>2. DMX Universe Setup</H4>
         <P>
           Connect your DMX USB PRO device. Tell Captivate which DMX fixtures you
           have, where they are located in space, and how they work.
         </P>
-        <VideoPlaceholder />
+        <FixedARVideo
+          src="https://www.youtube.com/embed/Iii6gR0Sqeg"
+          ar={1440 / 900}
+          maxWidth={MAX_VID_WIDTH}
+        />
         <H4>3. Light Scenes</H4>
         <P>
           Create light scenes with Captivate's intuitive controls. Configure
           Captivate to automatically cycle through scenes for you.
         </P>
-        <VideoPlaceholder />
+        <FixedARVideo
+          src="https://www.youtube.com/embed/epzUI_UFjIg"
+          ar={1440 / 900}
+          maxWidth={MAX_VID_WIDTH}
+        />
         <H4>4. Visual Scenes</H4>
         <P>
           Create custom visuals that synchronize to your light scenes. Add

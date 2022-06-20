@@ -15,6 +15,17 @@ export default function Title() {
       <StarWrapper style={{ animationDuration: '200000ms' }}>
         <Stars />
       </StarWrapper>
+      <StarWrapper style={{ animationDuration: '100000ms' }}>
+        <Stars />
+      </StarWrapper>
+      <StarWrapper style={{ animationDuration: '100000ms' }}>
+        <Stars />
+      </StarWrapper>
+      {layer(100)}
+      {layer(200)}
+      {layer(300)}
+      {layer(400)}
+      {layer(500)}
       <Logo>
         <StaticImage
           placeholder="none"
@@ -28,12 +39,21 @@ export default function Title() {
   )
 }
 
+function layer(delay_seconds) {
+  return (
+    <StarWrapper style={{ animationDuration: `${delay_seconds * 1000}ms` }}>
+      <Stars />
+    </StarWrapper>
+  )
+}
+
 function Stars() {
   return (
     <img
       width="100%"
       height="100%"
       src={`data:image/svg+xml;utf8,${randoCirclesSvg(100, 100)}`}
+      alt="A bunch of white circles with random placement and opacity"
     />
   )
 }
@@ -43,9 +63,11 @@ const Logo = styled.div`
 `
 
 const StarWrapper = styled.div`
-  width: 200%;
-  height: 200%;
-  mask-image: radial-gradient(circle at center, #ffff, #fff0, #fff0);
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+
+  mask-image: radial-gradient(circle closest-side at center, #ffff, #fff0);
   animation-name: spin;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -70,6 +92,7 @@ const Root = styled.div`
   align-items: center;
   justify-content: center;
   /* background: radial-gradient(#ff00ee, #ffd500); */
+  overflow: hidden;
   background: ${(props) =>
     props.gradient ? `linear-gradient(to right, #bb00a5, #c3ca00)` : ''};
 `
