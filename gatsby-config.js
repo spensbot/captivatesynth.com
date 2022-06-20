@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `captivatesynth.com`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Captivate Lighting & Visual Synth`,
+    siteUrl: `https://captivatesynth.com`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -52,5 +52,6 @@ module.exports = {
         display: 'swap',
       },
     },
+    'gatsby-plugin-robots-txt',
   ],
 }

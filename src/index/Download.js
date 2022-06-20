@@ -5,6 +5,8 @@ import { H1, H2, H3, H4, H5, P, mediaMinWidth } from '../components/styled'
 import DownloadButton from '../components/DownloadButton'
 import { MAC_X86_FILENAME, MAC_ARM_FILENAME } from '../strings'
 
+const ACCEPTED = 'accepted_terms_and_conditions'
+
 export default function Download() {
   const [accepted, setAccepted] = useState(false)
 
@@ -17,12 +19,13 @@ export default function Download() {
       </P>
       <Row>
         <Checkbox
+          id={ACCEPTED}
           checked={accepted}
           onChange={(e) => setAccepted(e.target.checked)}
         />
-        <P>
+        <Label for={ACCEPTED}>
           I accept the <TermsAndConditions />
-        </P>
+        </Label>
       </Row>
       <Row style={{ margin: '0 -1rem' }}>
         <DownloadButton enabled={accepted} filename={MAC_X86_FILENAME}>
@@ -45,3 +48,5 @@ const Row = styled.div`
   display: flex;
   align-items: center;
 `
+
+const Label = styled.label``

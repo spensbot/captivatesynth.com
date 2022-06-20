@@ -4,6 +4,7 @@ import logo from '../../static/Thick.png'
 import { mediaMinWidth } from './styled'
 import MenuButton from './MenuButton'
 import zIndexes from '../zIndexes'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const speed = 0.1
 const opacity = 0.7
@@ -34,7 +35,7 @@ function Header({ expanded, fixed, invisible }) {
       }
     }
 
-    window.addEventListener('scroll', animate)
+    window.addEventListener('scroll', animate, { passive: true })
 
     const handle = requestAnimationFrame(animate)
 
@@ -62,14 +63,16 @@ function Header({ expanded, fixed, invisible }) {
       }}
     >
       <FlexWrap onClick={(e) => (window.location.href = '/')}>
-        <Title style={{ fontSize: `${outEase * 2 + 1.3}rem` }}>Captivate</Title>
-        <TitleIcon
+        <Title style={{ fontSize: `${outEase * 1.5 + 1.3}rem` }}>
+          Captivate
+        </Title>
+        <StaticImage
           src={logo}
           style={{ width: `${outEase * 0.7 + 2.0}rem`, opacity: 1 - outEase }}
           alt="Captivate Logo (a red, green, and blue cube)"
-        ></TitleIcon>
+        />
         <Spacer />
-        <SubTitle style={{ fontSize: `${outEase * 1 + 1}rem` }}>
+        <SubTitle style={{ fontSize: `${outEase * 0.75 + 1}rem` }}>
           Lighting & Visual Synth
         </SubTitle>
       </FlexWrap>

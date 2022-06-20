@@ -26,7 +26,11 @@ export default function Page({
 }) {
   return (
     <Root>
-      <Helmet>
+      <Helmet
+        htmlAttributes={{
+          lang: 'en',
+        }}
+      >
         <meta charSet="utf-8" />
         <meta name="description" content={pageDescription} />
         <meta
@@ -34,6 +38,7 @@ export default function Page({
           content="Captivate, Lighting, DMX, Stage, Visuals, Visualizer, Music"
         />
         <meta name="author" content="Spenser Saling" />
+        <meta lang="en" />
         <title>Captivate Lighting and Visual Synth: {pageName}</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>

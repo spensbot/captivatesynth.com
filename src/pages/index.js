@@ -17,6 +17,7 @@ import JustTheBeginning from '../index/JustTheBeginning'
 import BISF from '../index/BISF'
 import Download from '../index/Download'
 import { FixedARVideo } from '../components/FixedARVideo'
+import { StaticImage } from 'gatsby-plugin-image'
 
 // markup
 export default function IndexPage() {
@@ -160,8 +161,8 @@ export default function IndexPage() {
           </P>
         </SubSection>
         <SubSection style={{ flex: '0.5 0 0' }}>
-          <img
-            src={me}
+          <StaticImage
+            src="../../static/me_serious.png"
             style={{ width: '15rem', height: '20rem', objectFit: 'cover' }}
             alt="Spenser Saling, Captivate Creator"
           />
