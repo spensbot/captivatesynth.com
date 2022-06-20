@@ -1,6 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import logo from '../../static/Thick.png'
 import { mediaMinWidth } from './styled'
 import MenuButton from './MenuButton'
 import zIndexes from '../zIndexes'
@@ -67,7 +66,7 @@ function Header({ expanded, fixed, invisible }) {
           Captivate
         </Title>
         <StaticImage
-          src={logo}
+          src="../../static/Thick.png"
           style={{ width: `${outEase * 0.7 + 2.0}rem`, opacity: 1 - outEase }}
           alt="Captivate Logo (a red, green, and blue cube)"
         />
