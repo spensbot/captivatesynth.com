@@ -98,15 +98,7 @@ const Title = styled.h1`
   @media (min-width: ${mediaMinWidth}) {
     font-size: 3rem;
   } */
-  margin: 0;
-`
-
-const TitleIcon = styled.img`
-  margin-left: 0.5rem;
-  /* width: 5rem;
-  @media (min-width: ${mediaMinWidth}) {
-    width: 3rem;
-  } */
+  margin: 0 0.5rem 0 0;
 `
 
 const Spacer = styled.div`

@@ -8,10 +8,18 @@ export default function MenuButton({ openMenu }) {
 
   return (
     <Root>
-      <MenuIcon onClick={() => setOpen(true)} />
+      <Icon>
+        <MenuIcon onClick={() => setOpen(true)} />
+      </Icon>
       {open && <Menu onClose={() => setOpen(false)} />}
     </Root>
   )
 }
 
 const Root = styled.div``
+
+const Icon = styled.div`
+  cursor: pointer;
+  padding: 0.8rem;
+  margin: -0.5rem;
+`

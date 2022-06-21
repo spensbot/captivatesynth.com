@@ -53,5 +53,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-webpack-bundle-analyser-v2',
   ],
 }
