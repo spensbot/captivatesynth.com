@@ -3,7 +3,7 @@ module.exports = {
     title: `Captivate Lighting & Visual Synth`,
     siteUrl: `https://captivatesynth.com`,
   },
-  pathPrefix: '/captivatesynth',
+  pathPrefix: '/captivatesynth.com',
   plugins: [
     'gatsby-plugin-styled-components',
     {
