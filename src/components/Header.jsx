@@ -4,6 +4,7 @@ import { mediaMinWidth } from './styled'
 import MenuButton from './MenuButton'
 import zIndexes from '../zIndexes'
 import { StaticImage } from 'gatsby-plugin-image'
+import icon from '../../static/icon.svg'
 
 const speed = 0.1
 const opacity = 0.7
@@ -65,9 +66,8 @@ function Header({ expanded, fixed, invisible }) {
         <Title style={{ fontSize: `${outEase * 1.5 + 1.3}rem` }}>
           Captivate
         </Title>
-        <StaticImage
-          src="../../static/Thick.png"
-          placeholder="none"
+        <img
+          src={icon}
           style={{ width: `${outEase * 0.7 + 2.0}rem`, opacity: 1 - outEase }}
           alt="Captivate Logo (a red, green, and blue cube)"
         />

@@ -1,11 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import useBounds from '../hooks/useBounds'
-import { opacity } from '../components/Header'
-// import logo from '../../static/Thick.png'
-import { mediaMinWidth } from '../components/styled'
-import { StaticImage } from 'gatsby-plugin-image'
 import randoCirclesSvg from '../components/randoCirclesSvg'
+import icon from '../../static/icon.svg'
 
 const GRADIENT_KEY = 'is-gradient'
 
@@ -27,13 +23,13 @@ export default function Title() {
       {layer(400)}
       {layer(500)}
       <Logo>
-        <StaticImage
-          placeholder="none"
-          src="../../static/Thick.png"
-          width={150}
-          height={150}
+        <img
+          src={icon}
+          width="10rem"
+          height="10rem"
+          style={{ width: '10rem', height: '10rem' }}
           alt="Captivate Logo (a red, green, and blue cube)"
-        ></StaticImage>
+        ></img>
       </Logo>
     </Root>
   )
