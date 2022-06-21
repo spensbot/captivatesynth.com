@@ -52,6 +52,9 @@ export default function GettingStartedPage() {
           Create custom visuals that synchronize to your light scenes. Add
           effects to your visualizers to customize them even further.
         </P>
+        <P>
+          Add your own videos and images for a completely unique experience.
+        </P>
         <VideoPlaceholder />
         <H4>5. Advanced Lighting</H4>
         <P>

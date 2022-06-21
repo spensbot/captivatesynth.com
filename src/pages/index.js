@@ -109,9 +109,7 @@ export default function IndexPage() {
             Combine visualizers and effects in any way to perfect your visual
             experience
           </P>
-          <P>
-            Load your own videos and photos to create something truly unique
-          </P>
+          <P>Add your own videos and photos to create something truly unique</P>
           <P>
             Visualizers and effects listen to the parameters from the active
             light scene so lighing and visuals are automatically synchronized.
@@ -223,7 +221,7 @@ function Video({ src, alt }) {
       loop
       muted
       autoPlay
-      playsinline
+      playsInline
       src={src}
       style={{
         width: '100%',

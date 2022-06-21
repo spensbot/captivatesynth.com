@@ -23,7 +23,7 @@ export default function Download() {
           checked={accepted}
           onChange={(e) => setAccepted(e.target.checked)}
         />
-        <Label for={ACCEPTED}>
+        <Label htmlFor={ACCEPTED}>
           I accept the <TermsAndConditions />
         </Label>
       </Row>

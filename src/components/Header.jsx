@@ -67,6 +67,7 @@ function Header({ expanded, fixed, invisible }) {
         </Title>
         <StaticImage
           src="../../static/Thick.png"
+          placeholder="none"
           style={{ width: `${outEase * 0.7 + 2.0}rem`, opacity: 1 - outEase }}
           alt="Captivate Logo (a red, green, and blue cube)"
         />
