@@ -58,7 +58,7 @@ function Header({ expanded, fixed, invisible }) {
         backgroundColor: backgroundColor,
         boxShadow: boxShadow,
         WebkitBoxShadow: boxShadow,
-        visibility: !invisible,
+        visibility: invisible ? 'hidden' : 'visible',
       }}
     >
       <FlexWrap onClick={(e) => (window.location.href = '/')}>

@@ -1,20 +1,14 @@
 import * as React from 'react'
 import { H1, H2, H3, H4, H5, H6, P, mediaMinWidth } from '../components/styled'
-import gifUniverse from '../../static/captivate-universe.gif'
-import gifLightScenes from '../../static/captivate-light-scenes.gif'
-import gifVisualScenes from '../../static/captivate-visual-scenes.gif'
-import gifMixer from '../../static/captivate-mixer.gif'
 import preview_universe from '../../static/preview_universe.mp4'
 import preview_light_scenes from '../../static/preview_light_scenes.mp4'
 import preview_visualizer from '../../static/preview_visualizer.mp4'
 import preview_mixer from '../../static/preview_mixer.mp4'
-import me from '../../static/me_serious.png'
 import Section from '../components/Section'
 import Title from '../index/Title'
 import Page from '../components/Page'
 import styled from 'styled-components'
 import JustTheBeginning from '../index/JustTheBeginning'
-import BISF from '../index/BISF'
 import Download from '../index/Download'
 import FixedARVideo from '../components/FixedARVideo'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -114,6 +108,9 @@ export default function IndexPage() {
           <P>
             Combine visualizers and effects in any way to perfect your visual
             experience
+          </P>
+          <P>
+            Load your own videos and photos to create something truly unique
           </P>
           <P>
             Visualizers and effects listen to the parameters from the active
@@ -226,6 +223,7 @@ function Video({ src, alt }) {
       loop
       muted
       autoPlay
+      playsinline
       src={src}
       style={{
         width: '100%',

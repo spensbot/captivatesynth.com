@@ -11,7 +11,7 @@ const GRADIENT_KEY = 'is-gradient'
 
 export default function Title() {
   return (
-    <Root gradient={Math.random() > 0.5}>
+    <Root gradient={true}>
       <StarWrapper style={{ animationDuration: '200000ms' }}>
         <Stars />
       </StarWrapper>

@@ -176,8 +176,7 @@ const AAWrapper = styled.div`
   display: flex;
   box-shadow: 0 0 0.5rem 0 #0001;
   border: 1px solid #00000055;
-  max-width: 25rem;
-  min-width: 25rem;
+  max-width: 30rem;
   flex: 1 1 auto;
   margin: 0.5rem;
   /* padding: 1rem; */
