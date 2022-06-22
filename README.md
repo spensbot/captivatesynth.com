@@ -1,5 +1,3 @@
-# [CaptivateSynth.com](https://captivatesynth.com/)
+# DEAD REPO
 
-The official website for Captivate, the Lighting and Visual Synth: [https://captivatesynth.com/](https://captivatesynth.com/)
-
-You can find the Captivate repo here: [https://github.com/spensbot/captivate](https://github.com/spensbot/captivate)
+Move to: https://github.com/captivatesynth/captivatesynth.github.io
